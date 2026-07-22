@@ -1,0 +1,66 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF4FF"/>
+      <stop offset="1" stop-color="#E6FFFB"/>
+    </linearGradient>
+    <linearGradient id="cardBlue" x1="0" y1="0" x2="260" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="cardRed" x1="0" y1="0" x2="260" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EF4444"/>
+      <stop offset="1" stop-color="#DC2626"/>
+    </linearGradient>
+    <linearGradient id="cardMagenta" x1="0" y1="0" x2="260" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E11D8A"/>
+      <stop offset="1" stop-color="#BE185D"/>
+    </linearGradient>
+    <linearGradient id="cardOrange" x1="0" y1="0" x2="260" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F97316"/>
+      <stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="cardGreen" x1="0" y1="0" x2="260" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16A34A"/>
+      <stop offset="1" stop-color="#15803D"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1F2937" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="38" width="1104" height="344" rx="24" fill="white"/>
+  </g>
+
+  <text x="90" y="96" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" fill="#0F172A">
+    Pay Securely via SSLCommerz
+  </text>
+  <text x="90" y="132" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="500" fill="#475569">
+    Multiple payment methods available for Technical Journal authors
+  </text>
+
+  <rect x="90" y="170" width="220" height="84" rx="16" fill="url(#cardBlue)"/>
+  <text x="130" y="221" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800" fill="white">VISA</text>
+
+  <rect x="330" y="170" width="220" height="84" rx="16" fill="url(#cardRed)"/>
+  <text x="352" y="221" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="800" fill="white">Mastercard</text>
+
+  <rect x="570" y="170" width="220" height="84" rx="16" fill="url(#cardMagenta)"/>
+  <text x="632" y="221" font-family="Inter, Arial, sans-serif" font-size="35" font-weight="800" fill="white">bKash</text>
+
+  <rect x="810" y="170" width="220" height="84" rx="16" fill="url(#cardOrange)"/>
+  <text x="875" y="221" font-family="Inter, Arial, sans-serif" font-size="33" font-weight="800" fill="white">Nagad</text>
+
+  <rect x="210" y="274" width="220" height="84" rx="16" fill="#0EA5E9"/>
+  <text x="265" y="326" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" fill="white">Rocket</text>
+
+  <rect x="450" y="274" width="220" height="84" rx="16" fill="url(#cardGreen)"/>
+  <text x="498" y="326" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" fill="white">Upay</text>
+
+  <rect x="690" y="274" width="220" height="84" rx="16" fill="#111827"/>
+  <text x="742" y="326" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="white">Cards & More</text>
+</svg>
+

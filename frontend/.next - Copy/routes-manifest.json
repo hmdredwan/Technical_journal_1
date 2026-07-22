@@ -1,0 +1,424 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/",
+      "destination": "/:file",
+      "internal": true,
+      "priority": true,
+      "missing": [
+        {
+          "type": "header",
+          "key": "x-nextjs-data"
+        }
+      ],
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+))/$"
+    },
+    {
+      "source": "/:notfile((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+)",
+      "destination": "/:notfile/",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+))$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/admin/submissions/[id]/view",
+      "regex": "^/admin/submissions/([^/]+?)/view(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/submissions/(?<nxtPid>[^/]+?)/view(?:/)?$"
+    },
+    {
+      "page": "/archives/volume/[volumeNumber]/issue/[issueNumber]",
+      "regex": "^/archives/volume/([^/]+?)/issue/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPvolumeNumber": "nxtPvolumeNumber",
+        "nxtPissueNumber": "nxtPissueNumber"
+      },
+      "namedRegex": "^/archives/volume/(?<nxtPvolumeNumber>[^/]+?)/issue/(?<nxtPissueNumber>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/articles/[id]",
+      "regex": "^/articles/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/articles/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard/submissions/[id]",
+      "regex": "^/author\\-dashboard/submissions/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/author\\-dashboard/submissions/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/news/[id]",
+      "regex": "^/news/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/news/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/archives",
+      "regex": "^/archives(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/archives(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard",
+      "regex": "^/author\\-dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/author\\-dashboard(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard/manuscript-format",
+      "regex": "^/author\\-dashboard/manuscript\\-format(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/author\\-dashboard/manuscript\\-format(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard/my-submissions",
+      "regex": "^/author\\-dashboard/my\\-submissions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/author\\-dashboard/my\\-submissions(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard/payments",
+      "regex": "^/author\\-dashboard/payments(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/author\\-dashboard/payments(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard/payments/cancel",
+      "regex": "^/author\\-dashboard/payments/cancel(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/author\\-dashboard/payments/cancel(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard/payments/fail",
+      "regex": "^/author\\-dashboard/payments/fail(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/author\\-dashboard/payments/fail(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard/payments/success",
+      "regex": "^/author\\-dashboard/payments/success(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/author\\-dashboard/payments/success(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard/profile",
+      "regex": "^/author\\-dashboard/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/author\\-dashboard/profile(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard/revisions",
+      "regex": "^/author\\-dashboard/revisions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/author\\-dashboard/revisions(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard/settings",
+      "regex": "^/author\\-dashboard/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/author\\-dashboard/settings(?:/)?$"
+    },
+    {
+      "page": "/author-dashboard/submit",
+      "regex": "^/author\\-dashboard/submit(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/author\\-dashboard/submit(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/editor-dashboard",
+      "regex": "^/editor\\-dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editor\\-dashboard(?:/)?$"
+    },
+    {
+      "page": "/editor-dashboard/assign-reviewers",
+      "regex": "^/editor\\-dashboard/assign\\-reviewers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editor\\-dashboard/assign\\-reviewers(?:/)?$"
+    },
+    {
+      "page": "/editor-dashboard/completed-archive",
+      "regex": "^/editor\\-dashboard/completed\\-archive(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editor\\-dashboard/completed\\-archive(?:/)?$"
+    },
+    {
+      "page": "/editor-dashboard/desk-review",
+      "regex": "^/editor\\-dashboard/desk\\-review(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editor\\-dashboard/desk\\-review(?:/)?$"
+    },
+    {
+      "page": "/editor-dashboard/final-decision",
+      "regex": "^/editor\\-dashboard/final\\-decision(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editor\\-dashboard/final\\-decision(?:/)?$"
+    },
+    {
+      "page": "/editor-dashboard/monitor-reviews",
+      "regex": "^/editor\\-dashboard/monitor\\-reviews(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editor\\-dashboard/monitor\\-reviews(?:/)?$"
+    },
+    {
+      "page": "/editor-dashboard/overview",
+      "regex": "^/editor\\-dashboard/overview(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editor\\-dashboard/overview(?:/)?$"
+    },
+    {
+      "page": "/editor-dashboard/ready-for-publication",
+      "regex": "^/editor\\-dashboard/ready\\-for\\-publication(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editor\\-dashboard/ready\\-for\\-publication(?:/)?$"
+    },
+    {
+      "page": "/editor-dashboard/review-details",
+      "regex": "^/editor\\-dashboard/review\\-details(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editor\\-dashboard/review\\-details(?:/)?$"
+    },
+    {
+      "page": "/editor-dashboard/settings",
+      "regex": "^/editor\\-dashboard/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editor\\-dashboard/settings(?:/)?$"
+    },
+    {
+      "page": "/editorial-board",
+      "regex": "^/editorial\\-board(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editorial\\-board(?:/)?$"
+    },
+    {
+      "page": "/editorial-dashboard",
+      "regex": "^/editorial\\-dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editorial\\-dashboard(?:/)?$"
+    },
+    {
+      "page": "/editorial-dashboard/assigned",
+      "regex": "^/editorial\\-dashboard/assigned(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editorial\\-dashboard/assigned(?:/)?$"
+    },
+    {
+      "page": "/editorial-dashboard/logs",
+      "regex": "^/editorial\\-dashboard/logs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editorial\\-dashboard/logs(?:/)?$"
+    },
+    {
+      "page": "/editorial-dashboard/profile",
+      "regex": "^/editorial\\-dashboard/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/editorial\\-dashboard/profile(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/forgot-password",
+      "regex": "^/forgot\\-password(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/forgot\\-password(?:/)?$"
+    },
+    {
+      "page": "/guidelines",
+      "regex": "^/guidelines(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/guidelines(?:/)?$"
+    },
+    {
+      "page": "/issues/current",
+      "regex": "^/issues/current(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/issues/current(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/news",
+      "regex": "^/news(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/news(?:/)?$"
+    },
+    {
+      "page": "/register",
+      "regex": "^/register(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/register(?:/)?$"
+    },
+    {
+      "page": "/reset-password",
+      "regex": "^/reset\\-password(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reset\\-password(?:/)?$"
+    },
+    {
+      "page": "/review-invitation/accept",
+      "regex": "^/review\\-invitation/accept(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/review\\-invitation/accept(?:/)?$"
+    },
+    {
+      "page": "/review-invitation/reject",
+      "regex": "^/review\\-invitation/reject(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/review\\-invitation/reject(?:/)?$"
+    },
+    {
+      "page": "/reviewer-dashboard",
+      "regex": "^/reviewer\\-dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reviewer\\-dashboard(?:/)?$"
+    },
+    {
+      "page": "/reviewer-dashboard/assigned",
+      "regex": "^/reviewer\\-dashboard/assigned(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reviewer\\-dashboard/assigned(?:/)?$"
+    },
+    {
+      "page": "/reviewer-dashboard/logs",
+      "regex": "^/reviewer\\-dashboard/logs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reviewer\\-dashboard/logs(?:/)?$"
+    },
+    {
+      "page": "/reviewer-dashboard/plagiarism-reports",
+      "regex": "^/reviewer\\-dashboard/plagiarism\\-reports(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reviewer\\-dashboard/plagiarism\\-reports(?:/)?$"
+    },
+    {
+      "page": "/reviewer-dashboard/profile",
+      "regex": "^/reviewer\\-dashboard/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reviewer\\-dashboard/profile(?:/)?$"
+    },
+    {
+      "page": "/reviewer-dashboard/settings",
+      "regex": "^/reviewer\\-dashboard/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reviewer\\-dashboard/settings(?:/)?$"
+    },
+    {
+      "page": "/submit",
+      "regex": "^/submit(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/submit(?:/)?$"
+    },
+    {
+      "page": "/submit/reviewer-application",
+      "regex": "^/submit/reviewer\\-application(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/submit/reviewer\\-application(?:/)?$"
+    },
+    {
+      "page": "/user-dashboard",
+      "regex": "^/user\\-dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/user\\-dashboard(?:/)?$"
+    },
+    {
+      "page": "/user-dashboard/profile",
+      "regex": "^/user\\-dashboard/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/user\\-dashboard/profile(?:/)?$"
+    },
+    {
+      "page": "/verify-email",
+      "regex": "^/verify\\-email(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/verify\\-email(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

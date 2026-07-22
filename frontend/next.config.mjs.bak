@@ -1,0 +1,58 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+
+  images: {
+    remotePatterns: [
+      {
+      protocol: 'http',
+      hostname: '127.0.0.1',
+      port: '8000',
+      pathname: '/api/**',          // covers /api/media/... and others
+      },
+      {
+        protocol: 'http',
+        hostname: '127.0.0.1',
+        port: '8000',
+        pathname: '/api/media/**',     // ← changed or add this
+      },
+      {
+        protocol: 'http',
+        hostname: '127.0.0.1',
+        port: '8000',
+        pathname: '/media/**',
+      },
+      {
+      protocol: 'http',
+      hostname: 'localhost',
+      port: '8000',
+      pathname: '/api/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '8000',
+        pathname: '/api/media/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '8000',
+        pathname: '/media/**',
+      },
+      // Optional: allow your future production domain
+      {
+        protocol: 'https',
+        hostname: 'rri.websoftbd.net',
+        pathname: '/api/media/**',
+      },
+    ],
+  },
+
+  // Optional: suppress hydration warnings in dev (only if you still have them)
+  experimental: {
+    // suppressHydrationWarning: true,  // uncomment only if needed
+  },
+};
+
+export default nextConfig;
